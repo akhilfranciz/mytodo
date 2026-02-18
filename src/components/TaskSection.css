@@ -50,6 +50,23 @@
   padding: 0;
 }
 
+/* Section expand animation */
+@keyframes sectionExpand {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 2000px;
+  }
+}
+
+.task-section__list {
+  animation: sectionExpand 0.3s ease-out;
+  overflow: hidden;
+}
+
 .task-section__empty {
   text-align: center;
   color: #9ca3af;

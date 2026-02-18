@@ -29,7 +29,10 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onEditClick, onDelete }) => {
   const initial = task.title.charAt(0).toUpperCase();
 
   return (
-    <div className={`task-item ${task.status === 'completed' ? 'task-item--completed' : ''}`}>
+    <div
+      className={`task-item task-item--enter ${task.status === 'completed' ? 'task-item--completed' : ''}`}
+      data-task-id={task.id}
+    >
       <div className="task-item__avatar">
         <span>{initial}</span>
       </div>
