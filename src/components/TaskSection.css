@@ -1,0 +1,59 @@
+.task-section {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.task-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 16px;
+  background: #f9fafb;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.task-section__header:hover {
+  background: #f3f4f6;
+}
+
+.task-section__title {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #374151;
+}
+
+.task-section__count {
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.task-section__chevron {
+  transition: transform 0.2s ease;
+  transform: rotate(0deg);
+}
+
+.task-section__chevron--expanded {
+  transform: rotate(180deg);
+}
+
+.task-section__list {
+  padding: 0;
+}
+
+.task-section__empty {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 20px 16px;
+  margin: 0;
+}

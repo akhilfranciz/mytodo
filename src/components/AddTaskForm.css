@@ -1,0 +1,79 @@
+.add-task-form {
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.add-task-form__input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.add-task-form__input:focus {
+  border-color: #1a3c8a;
+}
+
+.add-task-form__textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.add-task-form__textarea:focus {
+  border-color: #1a3c8a;
+}
+
+.add-task-form__actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.add-task-form__btn {
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.add-task-form__btn--cancel {
+  background: #ffffff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.add-task-form__btn--cancel:hover {
+  background: #f3f4f6;
+}
+
+.add-task-form__btn--add {
+  background: #1a3c8a;
+  color: #ffffff;
+  border: 1px solid #1a3c8a;
+  min-width: 120px;
+}
+
+.add-task-form__btn--add:hover {
+  background: #15337a;
+}
+
+.add-task-form__btn--add:disabled {
+  background: #9ca3af;
+  border-color: #9ca3af;
+  cursor: not-allowed;
+}

@@ -1,0 +1,45 @@
+.app {
+  width: 100%;
+  max-width: 500px;
+  min-height: 100vh;
+  background: #ffffff;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.app__sections {
+  padding-bottom: 80px;
+}
+
+.app__fab {
+  position: fixed;
+  bottom: 28px;
+  right: calc(50% - 220px);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1a3c8a;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(26, 60, 138, 0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+  z-index: 50;
+}
+
+.app__fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(26, 60, 138, 0.5);
+}
+
+.app__fab:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 500px) {
+  .app__fab {
+    right: 24px;
+  }
+}

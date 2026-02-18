@@ -1,0 +1,139 @@
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  border-bottom: 1px solid #f3f4f6;
+  position: relative;
+  transition: background-color 0.15s;
+}
+
+.task-item:hover {
+  background-color: #fafbfc;
+  cursor: url("data:image/svg+xml,%3Csvg width='18' height='19' viewBox='0 0 18 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.72096 1.90003V5.00003H8.77496C9.17571 4.97538 9.57794 4.99315 9.97496 5.05303C10.2706 5.11979 10.5544 5.2307 10.817 5.38203C11.1081 5.54533 11.3339 5.8043 11.456 6.11503L11.607 6.10103C12.0514 6.04792 12.502 6.08984 12.929 6.22403C13.3211 6.41517 13.6635 6.69486 13.929 7.04103C14.015 7.14103 14.09 7.24103 14.152 7.32403H14.816C15.1349 7.32413 15.4502 7.39103 15.7416 7.52043C16.0331 7.64983 16.2942 7.83885 16.5082 8.07532C16.7221 8.31179 16.8842 8.59046 16.9839 8.89337C17.0835 9.19628 17.1187 9.51672 17.087 9.83403L16.777 12.934C16.7209 13.4921 16.5482 14.0321 16.27 14.519L14.681 17.3C14.5313 17.5621 14.315 17.7799 14.0541 17.9315C13.7931 18.083 13.4967 18.1629 13.195 18.163H6.00196C5.68383 18.1631 5.37197 18.0745 5.10136 17.9073C4.83076 17.74 4.61211 17.5006 4.46996 17.216L3.08396 14.441L0.24096 9.70003C0.0268144 9.33784-0.0480753 8.91004 0.030294 8.49664C0.108663 8.08324 0.334926 7.71254 0.666773 7.45385C0.99862 7.19516 1.41333 7.0662 1.83336 7.09108C2.25339 7.11596 2.64997 7.29298 2.94896 7.58903L4.72796 9.36503V1.90003C4.75361 1.38755 4.97525 0.904524 5.34704 0.550873C5.71884 0.197222 6.21233 0 6.72546 0C7.23859 0 7.73208 0.197222 8.10388 0.550873C8.47567 0.904524 8.69731 1.38755 8.72296 1.90003H8.72096Z' fill='%23E32A34'/%3E%3C/svg%3E") 9 0, pointer;
+}
+
+.task-item--completed {
+  opacity: 0.75;
+}
+
+.task-item__avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  border: 2px solid #1a3c8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+  margin-top: 2px;
+}
+
+.task-item__avatar span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a3c8a;
+}
+
+.task-item__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-item__top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.task-item__title {
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #034EA2;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.task-item__title--completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.task-item__status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.task-item__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.task-item__description {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #231F20;
+  margin: 2px 0 6px;
+}
+
+.task-item__description--completed {
+  text-decoration: line-through;
+}
+
+.task-item__bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-item__date {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Hover actions: edit & delete icons */
+.task-item__hover-actions {
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.task-item:hover .task-item__hover-actions {
+  opacity: 1;
+}
+
+.task-item__icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-item__icon-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.task-item__icon-btn--danger:hover {
+  background-color: #fef2f2;
+}
